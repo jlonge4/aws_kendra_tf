@@ -22,8 +22,8 @@ resource "aws_iam_policy" "my_policy" {
         "s3:ListBucket"
       ],
       "Resource": [
-        "arn:aws:s3:::wods-cf",
-        "arn:aws:s3:::wods-cf/*"
+        "${aws_s3_bucket.kendra-bucket.arn}",
+        "${aws_s3_bucket.kendra-bucket.arn}/*"
       ]
     }
   ]

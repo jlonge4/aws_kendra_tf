@@ -4,7 +4,7 @@ resource "aws_kendra_index" "test-index" {
   role_arn = aws_iam_role.my_role.arn
 }
 
-resource "aws_kendra_data_source" "example" {
+resource "aws_kendra_data_source" "kendra-s3-connector" {
 index_id = aws_kendra_index.test-index.id
 name     = "example"
 type     = "S3"
